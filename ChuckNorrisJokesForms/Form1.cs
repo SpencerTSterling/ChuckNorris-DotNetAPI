@@ -24,5 +24,16 @@ namespace ChuckNorrisJokesForms
             string jokeText = joke.JokeText;
             MessageBox.Show(jokeText);
         }
+
+        private async void Form1_Load(object sender, EventArgs e)
+        {
+            var categories = await ChuckNorrisClient.GetCategories();
+
+            foreach (var category in categories)
+            {
+                categoryCbox.Items.Add(category);
+            }
+
+        }
     }
 }
