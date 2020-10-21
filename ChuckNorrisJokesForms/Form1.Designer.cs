@@ -40,6 +40,7 @@
             this.generateJokeBtn.TabIndex = 0;
             this.generateJokeBtn.Text = "Generate Joke";
             this.generateJokeBtn.UseVisualStyleBackColor = true;
+            this.generateJokeBtn.Click += new System.EventHandler(this.generateJokeBtn_Click);
             // 
             // categoryCbox
             // 
